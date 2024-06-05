@@ -43,13 +43,17 @@
     <title>Frontend Mentor | Fylo data storage component</title>
   </head>
   <body
-    class="flex flex-col justify-center items-center gap-20 min-h-screen font-['raleway'] text-white bg-cover bg-center"
-    style="background-image: url(./images/bg-mobile.png)"
+    class="xl:relative flex flex-col justify-center items-center gap-20 min-h-screen font-['raleway'] text-white bg-cover bg-center xl:bg-none xl:bg-neutralVeryDarkBlue bg-[url('./images/bg-mobile.png')]"
   >
-    <main class="w-[326px] flex flex-col gap-6">
+    <div
+      class="xl:absolute xl:bottom-0 xl:left-0 xl:w-full xl:h-1/2 xl:bg-auto xl:bg-no-repeat xl:bg-center xl:bg-[url('./images/bg-desktop.png')] -z-10"
+    ></div>
+    <main
+      class="w-[326px] xl:w-[900px] flex flex-col xl:flex-row xl:items-end gap-6"
+    >
       <!-- logo and icons section -->
       <section
-        class="bg-neutralDarkBlue p-9 rounded-xl rounded-tr-[100px] flex flex-col gap-6"
+        class="bg-neutralDarkBlue p-9 rounded-xl rounded-tr-[100px] flex flex-col gap-6 xl:w-2/5"
       >
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="135" height="40">
@@ -89,7 +93,7 @@
       </section>
       <!-- storage data section -->
       <section
-        class="relative bg-neutralDarkBlue px-6 pt-6 pb-12 flex flex-col items-center gap-3 rounded-xl"
+        class="relative bg-neutralDarkBlue px-6 pt-6 pb-12 flex flex-col items-center xl:items-start gap-3 rounded-xl xl:w-3/5 xl:h-[154px] xl:px-6 xl:pt-10 xl:pb-0"
       >
         <p class="text-neutralPaleBlue">
           You’ve used <span class="text-white font-medium">815 GB</span> of your
@@ -109,10 +113,13 @@
           </div>
         </div>
         <div
-          class="absolute -bottom-8 left-20 bg-white text-neutralVeryDarkBlue flex items-center p-4 gap-3 rounded-xl text-xs"
+          class="absolute -bottom-8 left-20 xl:bottom-auto xl:left-auto xl:-top-10 xl:right-8 bg-white text-neutralVeryDarkBlue flex items-center p-4 gap-3 rounded-xl text-xs"
         >
           <span class="font-bold text-4xl">185</span> GB LEFT
         </div>
+        <div
+          class="xl:absolute xl:top-0 xl:right-8 xl:w-0 xl:h-0 xl:border-t-[25px] xl:border-t-transparent xl:border-r-[40px] xl:border-r-white xl:border-b-[25px] xl:border-b-transparent"
+        ></div>
       </section>
     </main>
 
@@ -120,7 +127,11 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. <br />
+      Coded by
+      <a href="https://www.frontendmentor.io/profile/DearNatthaphong"
+        >Natthaphong Thongphueng</a
+      >.
     </div>
   </body>
 </html>
